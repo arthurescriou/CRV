@@ -1,0 +1,3 @@
+- S6: IaC, automatisation, auto-scaling.
+- S7 et S8: IoT, dataflow, connecteurs, DevOps, CI/CD.
+- S9 et S10: SRE, monitoring, test de charge.
