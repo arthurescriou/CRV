@@ -6,11 +6,11 @@ L'objectif de ce TME est de déployer une application de type web sur un cluster
 
 L'application est séparé en plusieurs parties :
 
-- Un front end en react : https://github.com/arthurescriou/redis-react
+- Un front end en react : <a href="https://github.com/arthurescriou/redis-react" >https://github.com/arthurescriou/redis-react</a>
 
-- Un serveur en nodejs : https://github.com/arthurescriou/redis-node
+- Un serveur en nodejs : <a href="https://github.com/arthurescriou/redis-node" >https://github.com/arthurescriou/redis-node</a>
 
-- Une base de données redis : https://hub.docker.com/_/redis
+- Une base de données redis : <a href="https://hub.docker.com/_/redis" >https://hub.docker.com/\_/redis</a>
 
 <img src="./img/redisTME3.png"/>
 
@@ -41,17 +41,17 @@ Vérifiez son adresse et ses ports d'écoute.
 
 ### Le serveur
 
-Créer un dockerfile et une image docker pour lancer le serveur nodejs. Configurer l'URL de connexion à la base redis convenablement.
+Créer un dockerfile et une image docker pour lancer le serveur nodejs. Configurez l'URL de connexion à la base redis convenablement.
 
-Vérifiez son adresse et ses ports d'écoute.
+Vérifiez son adresse et ses ports d'écoutes.
 
-### Exposer le serveur à l'exterieur du cluster
+### Exposer le serveur à l'extérieur du cluster
 
 Maintenant que le serveur fonctionne il faut pouvoir accéder à son API depuis un frontend : lui assigner une adresse accessible par internet.
 
-Pour ça on veut utiliser un tunnel http : https://github.com/anderspitman/awesome-tunneling
+Pour ça on veut utiliser un tunnel http : <a href="https://github.com/anderspitman/awesome-tunneling">https://github.com/anderspitman/awesome-tunneling</a>
 
-Vous pouvez choisir le tunnel que vous préfèrez. Sinon il est conseillé d'utiliser localtunnel. https://github.com/localtunnel
+Vous pouvez choisir le tunnel que vous préfèrez. Sinon il est conseillé d'utiliser localtunnel. <a href="https://github.com/localtunnel">https://github.com/localtunnel</a>
 
 Récupérez l'adresse du tunnel.
 
