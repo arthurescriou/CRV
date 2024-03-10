@@ -12,6 +12,8 @@ L'application est séparé en plusieurs parties :
 
 - Une base de données redis : https://hub.docker.com/_/redis
 
+<img src="./img/redisTME3.png"/>
+
 ## Kubernetes
 
 Pour utiliser un cluster kubernetes il y a deux solutions principales :
@@ -21,7 +23,7 @@ Pour utiliser un cluster kubernetes il y a deux solutions principales :
 
 ## Objectifs
 
-Créer une configuration à partir de fichier kubernetes en yaml.
+Créez une configuration à partir de fichier kubernetes en yaml.
 
 Le but ici est de créer les objets kubernetes (déploiement, pods, services, etc...) permettant de faire fonctionner l'application.
 
@@ -35,13 +37,13 @@ Il est également possible lancer l'application directement sur votre machine po
 
 Lancez une base de données redis à partir de l'image officielle fournis par redis.
 
-Vérifier son adresse et ses ports d'écoute.
+Vérifiez son adresse et ses ports d'écoute.
 
 ### Le serveur
 
 Créer un dockerfile et une image docker pour lancer le serveur nodejs. Configurer l'URL de connexion à la base redis convenablement.
 
-Vérifier son adresse et ses ports d'écoute.
+Vérifiez son adresse et ses ports d'écoute.
 
 ### Exposer le serveur à l'exterieur du cluster
 
@@ -51,7 +53,7 @@ Pour ça on veut utiliser un tunnel http : https://github.com/anderspitman/aweso
 
 Vous pouvez choisir le tunnel que vous préfèrez. Sinon il est conseillé d'utiliser localtunnel. https://github.com/localtunnel
 
-Récupérer l'adresse du tunnel.
+Récupérez l'adresse du tunnel.
 
 ### Le front end
 
