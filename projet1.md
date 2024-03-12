@@ -12,9 +12,9 @@ De plus pour observer le comportement des différents composants il faudra confi
 
 ### Redis
 
-Une base de données redis implémentant un pattern main/replicas, une base redis principale accepte toutes les opérations et des replicas recopie les données de cette base pour accepter plus de lecture en parallèle.
+Une base de données redis implémentant un pattern main/replicas, une base redis principale accepte toutes les opérations et des replicas recopient les données de cette base pour accepter plus de lecture en parallèle.
 
-Lorsqu'une écriture survient sur la base principale elle propage la modifications aux réplicas. Les réplicas n'acceptent pas d'écriture.
+Lorsqu'une écriture survient sur la base principale propage la modifications aux réplicas. Les réplicas n'acceptent pas d'écriture.
 
 Dans un premier temps seul les replicas pourront monter à l'échelle. Mais il est possible d'implémenter d'autres stratégies plus élaborées si le travail initial est terminé.
 
