@@ -48,3 +48,5 @@ Pour ça il faudra fournir un depôt git contenant les divers fichiers necessair
 Des images docker peuvent être aussi hebergé sur un depôt docker distant et fourni via la documentation.
 
 De plus un rapport au format pdf décrivant plus en détails votre démarche et vos décisions lors de cette conception devra être ajouté au rendu.
+
+Un soin particulier devra être apporté tout au long du projet et du rapport sur les notions de montée à l'échelle automatique et dynamique et sur la reproductibilitée du déploiement de l'infrastructure demandée.
