@@ -8,7 +8,7 @@ De plus pour observer le comportement des différents composants il faudra confi
 
 ## L'infrastructure
 
-<img src="./img/redisTME3ScaleProm.pnh"/>
+<img src="./img/redisTME3ScaleProm.png"/>
 
 ### Redis
 
