@@ -16,14 +16,20 @@ Une base de données redis implémentant un pattern main/replicas.
 
 Dans un premier temps seul les replicas pourront monter à l'échelle. Mais il est possible d'implémenter d'autres stratégies plus élaboré si le travail initial est terminé.
 
+<a href="https://hub.docker.com/_/redis" >https://hub.docker.com/\_/redis</a>
+
 ### Nodejs
 
 Un serveur nodejs stateless (vu en TME) qui appel la base redis et ses replicas.
+
+<a href="https://github.com/arthurescriou/redis-node" >https://github.com/arthurescriou/redis-node</a>
 
 ### React
 
 Un projet front end fait avec le framework React qui appel le serveur nodejs.
 Qui doit être build pour être déployé par un serveur de fichier statique.
+
+<a href="https://github.com/arthurescriou/redis-react" >https://github.com/arthurescriou/redis-react</a>
 
 ### Prometheus/grafana
 
@@ -32,6 +38,12 @@ Un outil de monitoring capable de se brancher sur plusieurs sources de données.
 Il est indispensable de connecter prometheus au serveur nodejs via son api `/metrics`.
 
 Cependant il est également possible d'ajouter des sources de données provenant de kubernetes ou redis grâce à des connecteurs supplémentaire.
+
+<a href="https://hub.docker.com/r/prom/prometheus">https://hub.docker.com/r/prom/prometheus</a>
+
+Prometheus vient avec le tableau de bord Grafana pour afficher les données :
+
+<a href="https://hub.docker.com/r/grafana/grafana">https://hub.docker.com/r/grafana/grafana</a>
 
 ## Objectifs et rendu
 

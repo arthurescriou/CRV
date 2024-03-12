@@ -69,6 +69,6 @@ _NB: Pour ce genre de tâche il est possible également d'utiliser des services 
 # Documentation
 
 - <a href="https://docs.docker.com/get-started/docker_cheatsheet.pdf">https://docs.docker.com/get-started/docker_cheatsheet.pdf</a>
-- <a href="https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-appliction-with-docker#step-3-writing-the-dockerfile">https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-appliction-with-docker#step-3-writing-the-dockerfile</a>
+- <a href="https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-application-with-docker#step-3-writing-the-dockerfile">https://www.digitalocean.com/community/tutorials/how-to-build-a-node-js-application-with-docker#step-3-writing-the-dockerfile</a>
 - <a href="https://kubernetes.io/docs/reference/kubectl/quick-reference/">https://kubernetes.io/docs/reference/kubectl/quick-reference/</a>
 - <a href="https://www.scaleway.com/en/docs/containers/kubernetes/reference-content/kubernetes-cheatsheet/">https://www.scaleway.com/en/docs/containers/kubernetes/reference-content/kubernetes-cheatsheet/</a>
