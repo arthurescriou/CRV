@@ -12,9 +12,11 @@ De plus pour observer le comportement des différents composants il faudra confi
 
 ### Redis
 
-Une base de données redis implémentant un pattern main/replicas.
+Une base de données redis implémentant un pattern main/replicas, une base redis principale accepte toutes les opérations et des replicas recopie les données de cette base pour accepter plus de lecture en parallèle.
 
-Dans un premier temps seul les replicas pourront monter à l'échelle. Mais il est possible d'implémenter d'autres stratégies plus élaboré si le travail initial est terminé.
+Lorsqu'une écriture survient sur la base principale elle propage la modifications aux réplicas. Les réplicas n'acceptent pas d'écriture.
+
+Dans un premier temps seul les replicas pourront monter à l'échelle. Mais il est possible d'implémenter d'autres stratégies plus élaborées si le travail initial est terminé.
 
 <a href="https://hub.docker.com/_/redis" >https://hub.docker.com/\_/redis</a>
 
@@ -22,12 +24,16 @@ Dans un premier temps seul les replicas pourront monter à l'échelle. Mais il e
 
 Un serveur nodejs stateless (vu en TME) qui appel la base redis et ses replicas.
 
+Grâce à la caractéristique stateless de ce serveur (ne possède pas d'état persistant) il est possible de le dupliquer sans modifier le comportement de l'application.
+
 <a href="https://github.com/arthurescriou/redis-node" >https://github.com/arthurescriou/redis-node</a>
 
 ### React
 
 Un projet front end fait avec le framework React qui appel le serveur nodejs.
 Qui doit être build pour être déployé par un serveur de fichier statique.
+
+La raison demandant une montée à l'échelle du client frontend est l'ouverture de beaucoup de clients simultanément. Ce n'est pas un cas que nous souhaitons explorer dans ce projet, le frontend ne sera utilisé seulement pour vérifier que le reste de l'application fonctionne corréctement.
 
 <a href="https://github.com/arthurescriou/redis-react" >https://github.com/arthurescriou/redis-react</a>
 
@@ -38,6 +44,10 @@ Un outil de monitoring capable de se brancher sur plusieurs sources de données.
 Il est indispensable de connecter prometheus au serveur nodejs via son api `/metrics`.
 
 Cependant il est également possible d'ajouter des sources de données provenant de kubernetes ou redis grâce à des connecteurs supplémentaire.
+
+Il peut être nécessaire de créer des prometheus exporter pour pouvoir récupérer des données d'autres sources. Pour ça il faut trouver ou construire des images docker adéquates.
+
+Il est inutile de réfléchir à comment faire monter cette partie à l'échelle de l'application dans le cadre de ce projet.
 
 <a href="https://hub.docker.com/r/prom/prometheus">https://hub.docker.com/r/prom/prometheus</a>
 
