@@ -58,7 +58,7 @@ networks:
     driver: bridge
 ```
 
-_NB: Vous pouvez utiliser votre images `node-redis` pour remplacer `arthurescriou/node-redis:1.0.5`. _
+_NB: Vous pouvez utiliser votre images `node-redis` pour remplacer `arthurescriou/node-redis:1.0.5`._
 
 _Attention : Ce fichier ne déploit que la base de données et le serveur node.js._
 
