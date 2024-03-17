@@ -1,6 +1,6 @@
 # TME 7
 
-L'objectif de ce TME est de déployer une application de type web sur un cluster kubernetes. A partir des images créé dans la séance précédentes
+L'objectif de ce TME est de déployer une application de type web sur un cluster kubernetes. A partir des images créé dans la séance précédentes.
 
 ## Kubernetes
 
