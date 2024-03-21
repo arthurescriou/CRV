@@ -137,3 +137,46 @@ Bien veiller à connecter les bonnes adresses pour les configurations à chaque 
 (Utiliser la commande `kubectl get services`.)
 
 Comme à la séance précédentes exposez les endpoints nécessaire avec des tunnels.
+
+## CI/CD
+
+Si vous ne pouvez pas créer d'images car vous n'avez pas docker sur votre machine vous pouvez créer une CI/CD.
+
+### Github actions
+
+Github propose un freetier pour la CI/CD.
+
+#### Démarche à suivre
+
+- Créer un repository avec le code que vous voulez build dans votre image
+- Créer un fichier `build-image.yml` dans le dossier `.github/workflow` :
+
+```yaml
+name: build-image
+
+on:
+  push:
+    branches:
+      - 'master'
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Build and push
+        uses: docker/build-push-action@v5
+        with:
+          push: true
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/stock-consumer:1.0.0
+```
+
+- Spécifiez `DOCKERHUB_USERNAME` et `DOCKERHUB_TOKEN` dans les secrets de votre repository => <a href="https://docs.docker.com/security/for-developers/access-tokens/">https://docs.docker.com/security/for-developers/access-tokens/</a>
+
+A chaque commit sur la branche spécifié une nouvelle image sera build et poussé sur dockerhub.
