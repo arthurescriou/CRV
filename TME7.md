@@ -149,7 +149,7 @@ Github propose un freetier pour la CI/CD.
 #### Démarche à suivre
 
 - Créer un repository avec le code que vous voulez build dans votre image
-- Créer un fichier `build-image.yml` dans le dossier `.github/workflow` :
+- Créer un fichier `build-image.yml` dans le dossier `.github/workflows` :
 
 ```yaml
 name: build-image
