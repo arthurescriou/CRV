@@ -106,9 +106,11 @@ Ce fichier permet de créer un déploiement qui contiendra des pods avec le cont
 
 Le déploiment créera 3 instance de ce pod. (On n'en a besoin que d'un pour continuer).
 
-Pour utiliser ce yaml : `kubectl create node-redis-deployment.yml`.
+Pour utiliser ce yaml : `kubectl create -f node-redis-deployment.yml`.
 
-Si on le modifie plus tard, `kubectl apply node-redis-deployment.yml`, pour appliquer les modifications.
+Si on le modifie plus tard, `kubectl apply -f node-redis-deployment.yml`, pour appliquer les modifications.
+
+Pour supprimer ce qui a été créé `kubectl delete -f node-redis-deployment.yml`.
 
 ## Objectifs
 
