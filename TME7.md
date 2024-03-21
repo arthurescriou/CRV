@@ -97,6 +97,7 @@ spec:
     spec:
       containers:
         - name: node-redis
+          imagePullPolicy: Always
           image: arthurescriou/node-redis:1.0.5
           ports:
             - containerPort: 8080
