@@ -14,7 +14,8 @@ spec:
   selector:
     app: redis
   ports:
-    - port: 6379
+    - protocol: TCP
+      port: 6379
       targetPort: 6379
   type: ClusterIP
 ```
@@ -56,7 +57,8 @@ spec:
   selector:
     app: node-redis
   ports:
-    - port: 8080
+    - protocol: TCP
+      port: 8080
       targetPort: 8080
   type: LoadBalancer
 ```
