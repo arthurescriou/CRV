@@ -174,7 +174,7 @@ jobs:
         uses: docker/build-push-action@v5
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/stock-consumer:1.0.0
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/${IMAGE_NAME}:1.0.0
 ```
 
 - Spécifiez `DOCKERHUB_USERNAME` et `DOCKERHUB_TOKEN` dans les secrets de votre repository => <a href="https://docs.docker.com/security/for-developers/access-tokens/">https://docs.docker.com/security/for-developers/access-tokens/</a>
