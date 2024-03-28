@@ -98,7 +98,7 @@ spec:
 
 Ces deux éléments permettent de déployer le serveur.
 
-L'url `redis.default.svc.cluster` permet d'accéder à un service depuis l'intérieur du cluster kubernetes.
+L'url `redis.default.svc.cluster.local` permet d'accéder à un service depuis l'intérieur du cluster kubernetes.
 
 ### Replicas
 
