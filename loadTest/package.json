@@ -1,0 +1,10 @@
+{
+  "name": "loadTest",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@faker-js/faker": "^8.4.1"
+  }
+}
