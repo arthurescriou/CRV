@@ -1,4 +1,4 @@
-import { faker } from '@faker-js/faker'
+const URL = process.env.URL || 'http://localhost:8080'
 
 const words = [
   'drive',
@@ -26,7 +26,6 @@ const sentences = [
   'Try to quantify the XML application, maybe it will compress the wireless bandwidth!',
 ]
 
-const URL = 'http://localhost:8080'
 const random = (max) => Math.floor(Math.random() * max)
 
 const sleep = (ms) => new Promise((res, rej) => setTimeout(res, ms))
