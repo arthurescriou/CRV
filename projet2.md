@@ -92,18 +92,25 @@ Pour vous aider à réaliser ces situations vous pouvez utiliser les scripts fou
 Les scripts fournissent plusieurs scénarios :
 
 - "server" ping le serveur sans qu'il intéragisse avec la base de données
+
   arguments :
 
   - nombre d'appels total (défaut: 10000)
   - nombre d'appels simultanés (défaut: 100)
 
 - "writeRead" fait des appels sur le serveur pour qu'il écrive et lise dans la base de données
+
+  arguments :
+
+  - nombre d'appels total (défaut: 10000)
+  - nombre d'appels simultanés (défaut: 100)
+
+- "pending" ouvre des connections avec le serveurs (attention il faut la version `arthurescriou/node-redis:1.0.6` pour que la route existe (si vous utilisez votre propre image vous avez besoin de mettre à jour le code)).
+
   arguments :
 
   - nombre d'appels simultanés (défaut: 200)
   - temps de réponse de la requête (défaut: 10000 (ms))
-
-- "pending" ouvre des connections avec le serveurs (attention il faut la version `arthurescriou/node-redis:1.0.6` pour que la route existe (si vous utilisez votre propre image vous avez besoin de mettre à jour le code)).
 
 Exemples :
 
