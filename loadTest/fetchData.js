@@ -67,16 +67,14 @@ const writeAndRead = async (max = 10000, iter = 10) => {
   while (call < max) {
     console.log('fetch')
     const writeRes = Promise.all(
-      new Array(iter).fill(1).map((_) => {
+      new Array(Math.floor(iter / 10)).fill(1).map((_) => {
         const id = words[random(words.length)]
         const val = sentences[random(sentences.length)]
         return setItem({ id, val })
       })
     )
     const readRes = Promise.all(
-      new Array(iter * 10)
-        .fill(1)
-        .map((_) => getItem(words[random(words.length)]))
+      new Array(iter).fill(1).map((_) => getItem(words[random(words.length)]))
     )
 
     const res = await Promise.all([writeRes, readRes])
