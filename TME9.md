@@ -26,6 +26,8 @@ Le script appel un URL (par défaut `http://localhost:8080`).
 
 Il est possible de modifier le fichier `fetchData.js` ou d'injecter la valeur voulue dans la variable d'environment URL.
 
+Il faut donc trouver l'endpoint de votre serveur. (à l'extérieur du cluster ou en déployant ce script dans un conteneur dans le cluster)
+
 Lancez le script pour tester la connexion.
 
 ```bash
