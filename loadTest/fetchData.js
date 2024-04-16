@@ -102,7 +102,8 @@ const main = async () => {
       await openPendingConnections(arg1, arg2)
       break
     default:
-      await ping()
+      console.log('connecting to ' + URL)
+      await fetch(URL)
       console.log('connection ok')
       console.log(`try with arguments :
         - node fetchData.js server 10000
