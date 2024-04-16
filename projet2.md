@@ -117,5 +117,5 @@ Exemples :
 ```bash
 node fetchData.js server 10000 100
 node fetchData.js writeRead 10000 100
-node fetchData.js pending 200 10000 100
+node fetchData.js pending 200 10000
 ```
