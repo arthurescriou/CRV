@@ -84,3 +84,31 @@ Exemple de graphiques qui pourrait être pertinent :
 - montée à l'échelle : (comportement lors de la création d'un nouveau conteneur)
 
 Vous pouvez ajouter tout les autres scénarios que vous trouvez pertinent.
+
+## Scripts fourni
+
+Pour vous aider à réaliser ces situations vous pouvez utiliser les scripts fourni dans le dossier <a href="https://github.com/arthurescriou/CRV/tree/master/loadTest">`loadTest` </a>
+
+Les scripts fournissent plusieurs scénarios :
+
+- "server" ping le serveur sans qu'il intéragisse avec la base de données
+  arguments :
+
+  - nombre d'appels total (défaut: 10000)
+  - nombre d'appels simultanés (défaut: 100)
+
+- "writeRead" fait des appels sur le serveur pour qu'il écrive et lise dans la base de données
+  arguments :
+
+  - nombre d'appels simultanés (défaut: 200)
+  - temps de réponse de la requête (défaut: 10000 (ms))
+
+- "pending" ouvre des connections avec le serveurs (attention il faut la version `arthurescriou/node-redis:1.0.6` pour que la route existe (si vous utilisez votre propre image vous avez besoin de mettre à jour le code)).
+
+Exemples :
+
+```bash
+node fetchData.js server 10000 100
+node fetchData.js writeRead 10000 100
+node fetchData.js pending 200 10000 100
+```
