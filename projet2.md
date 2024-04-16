@@ -24,6 +24,8 @@ Grâce à la caractéristique stateless de ce serveur (ne possède pas d'état p
 
 <a href="https://github.com/arthurescriou/redis-node" >https://github.com/arthurescriou/redis-node</a>
 
+<a href="https://hub.docker.com/r/arthurescriou/node-redis" >https://hub.docker.com/r/arthurescriou/node-redis</a>
+
 ### React
 
 Le frontend ne s'executant que très peu sur les serveur backend (transfert de fichier statique). On ne s'intéressera pas à ses performance.
